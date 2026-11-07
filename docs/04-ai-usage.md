@@ -107,5 +107,5 @@ AI 辅助完成需求拆解、LangGraph 状态与动作设计、Python 源码、
 
 最终从此前不存在的 `.validation-final-20261107` 创建干净环境，重新安装依赖后 48 项测试通过，`pip check` 无损坏依赖，`uv lock --check` 通过；全部示例 JSON 可解析，Markdown 相对链接有效，14 份 Trace（12 组离线加 2 组历史 live）均为 Schema 2.0 并含来源元数据字段；候选工作区秘密扫描、`.env` 忽略和候选排除检查均通过。
 
-GitHub 交付检查显示本地仓库仍无提交和 remote，GitHub CLI 的现有账号凭据已失效。AI 没有伪造题号、URL 或 SHA，也没有在缺少认证时假称推送成功；需要用户提供准确题号并重新认证或给出现有仓库 URL 后才能完成最终提交。
+GitHub 交付时，CLI 设备授权因本机无法连接 `api.github.com` 多次超时，且旧 keyring token 无效。用户按明确授权在 GitHub 网页创建公开空仓库后，AI 完成安全扫描、本地提交、remote 配置和 Git HTTPS 推送，并复核远程分支。原始题面没有数字题号，因此只记录题目名称和该事实，没有捏造编号。
 
