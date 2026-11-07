@@ -1,0 +1,16 @@
+{
+  "status": "incomplete",
+  "terminal_reason": "model_step_limit_reached",
+  "title": null,
+  "scenes": [],
+  "estimated_total_seconds": null,
+  "target_duration_seconds": 30,
+  "source_ids": [],
+  "duration_check": null,
+  "rule_check": null,
+  "risks": [],
+  "requested_fields": [],
+  "requested_details": null,
+  "message": "已达到模型决策步数上限，任务未完成。",
+  "trace_file": "examples\\08-model-step-limit\\trace.json"
+}

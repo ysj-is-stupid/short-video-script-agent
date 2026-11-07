@@ -1,0 +1,16 @@
+{
+  "trace_schema_version": "2.0",
+  "model_mode": "mock",
+  "model_metadata": {
+    "response_ids": []
+  },
+  "scenario": "duration_revision",
+  "mock_boundary": "Mock traces verify flow and state transitions, not real-model decision quality.",
+  "review_steps": [],
+  "raw_events": [],
+  "startup_error": {
+    "status": "failed",
+    "error_code": "invalid_input",
+    "message": "1 validation error for ScriptRequest\ntarget_duration_seconds\n  Input should be a valid integer [type=int_type, input_value='30秒', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_type"
+  }
+}

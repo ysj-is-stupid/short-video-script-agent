@@ -1,0 +1,18 @@
+{
+  "status": "needs_input",
+  "terminal_reason": "no_supporting_materials",
+  "title": null,
+  "scenes": [],
+  "estimated_total_seconds": null,
+  "target_duration_seconds": 30,
+  "source_ids": [],
+  "duration_check": null,
+  "rule_check": null,
+  "risks": [],
+  "requested_fields": [
+    "product_materials"
+  ],
+  "requested_details": "请补充云帧剪辑自动翻译功能的产品说明或官方素材、可引用的功能事实（如支持语言、字幕生成方式、操作步骤）以及素材来源 ID 或链接。",
+  "message": "需要补充信息。",
+  "trace_file": "examples\\live-02-no-materials\\trace.json"
+}

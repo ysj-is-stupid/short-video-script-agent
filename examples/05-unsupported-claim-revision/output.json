@@ -1,0 +1,83 @@
+{
+  "status": "completed",
+  "terminal_reason": "all_checks_passed",
+  "title": "字幕功能：清晰表达每一步",
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "visual": "展示产品中的字幕能力",
+      "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+      "subtitle": "支持字幕",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_ids": [
+        "P01-F01"
+      ],
+      "estimated_seconds": 9.0
+    },
+    {
+      "scene_id": "S02",
+      "visual": "展示创作者编辑短视频",
+      "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节",
+      "subtitle": "把内容整理成清晰脚本",
+      "source_ids": [],
+      "fact_ids": [],
+      "estimated_seconds": 9.2
+    },
+    {
+      "scene_id": "S03",
+      "visual": "展示发布前检查",
+      "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+      "subtitle": "检查后再发布",
+      "source_ids": [],
+      "fact_ids": [],
+      "estimated_seconds": 9.8
+    }
+  ],
+  "estimated_total_seconds": 28.0,
+  "target_duration_seconds": 30,
+  "source_ids": [
+    "P01"
+  ],
+  "duration_check": {
+    "draft_revision": 2,
+    "draft_fingerprint": "83b70dfcefe23a9f",
+    "scene_durations": [
+      {
+        "scene_id": "S01",
+        "estimated_seconds": 9.0
+      },
+      {
+        "scene_id": "S02",
+        "estimated_seconds": 9.2
+      },
+      {
+        "scene_id": "S03",
+        "estimated_seconds": 9.8
+      }
+    ],
+    "total_seconds": 28.0,
+    "target_seconds": 30,
+    "over_by_seconds": 0.0,
+    "within_limit": true,
+    "estimation_method": "zh=4.0 chars/s; en=150.0 words/min; transition=0.5s/scene"
+  },
+  "rule_check": {
+    "draft_revision": 2,
+    "draft_fingerprint": "83b70dfcefe23a9f",
+    "passed": true,
+    "violations": [],
+    "warnings": [],
+    "checked_source_ids": [
+      "P01"
+    ]
+  },
+  "risks": [
+    "时长为算法估算值，发布前仍建议真人试读。"
+  ],
+  "requested_fields": [],
+  "requested_details": null,
+  "message": "脚本已通过时长和规则检查。",
+  "trace_file": "examples\\05-unsupported-claim-revision\\trace.json"
+}

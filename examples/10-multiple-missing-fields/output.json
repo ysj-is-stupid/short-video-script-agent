@@ -1,0 +1,20 @@
+{
+  "status": "needs_input",
+  "terminal_reason": "missing_required_fields",
+  "title": null,
+  "scenes": [],
+  "estimated_total_seconds": null,
+  "target_duration_seconds": 30,
+  "source_ids": [],
+  "duration_check": null,
+  "rule_check": null,
+  "risks": [],
+  "requested_fields": [
+    "audience",
+    "platform",
+    "style"
+  ],
+  "requested_details": "请补充所有列出的业务必填字段。",
+  "message": "请补充缺失字段后重新运行。",
+  "trace_file": "examples\\10-multiple-missing-fields\\trace.json"
+}

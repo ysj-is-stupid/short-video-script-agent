@@ -1,0 +1,18 @@
+[
+  {
+    "material_id": "P01",
+    "product_name": "云帧剪辑",
+    "aliases": ["云帧"],
+    "title": "字幕能力说明",
+    "facts": [
+      {
+        "fact_id": "P01-F01",
+        "statement": "支持字幕",
+        "keywords": ["字幕"],
+        "allowed_numbers": []
+      }
+    ],
+    "tags": ["字幕", "视频", "文字"]
+  }
+]
+

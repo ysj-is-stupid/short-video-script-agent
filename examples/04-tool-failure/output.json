@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "terminal_reason": "tool_unavailable",
+  "title": null,
+  "scenes": [],
+  "estimated_total_seconds": null,
+  "target_duration_seconds": 30,
+  "source_ids": [],
+  "duration_check": null,
+  "rule_check": null,
+  "risks": [],
+  "requested_fields": [],
+  "requested_details": null,
+  "message": "素材检索工具不可用，任务未完成。",
+  "trace_file": "examples\\04-tool-failure\\trace.json"
+}

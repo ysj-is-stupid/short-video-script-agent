@@ -1,0 +1,18 @@
+{
+  "status": "needs_input",
+  "terminal_reason": "no_supporting_materials",
+  "title": null,
+  "scenes": [],
+  "estimated_total_seconds": null,
+  "target_duration_seconds": 30,
+  "source_ids": [],
+  "duration_check": null,
+  "rule_check": null,
+  "risks": [],
+  "requested_fields": [
+    "product_materials"
+  ],
+  "requested_details": "请提供与主题相关且可引用的产品事实素材。",
+  "message": "请补充与主题相关的产品素材。",
+  "trace_file": "examples\\03-no-materials\\trace.json"
+}

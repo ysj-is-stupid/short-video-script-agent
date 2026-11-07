@@ -1,0 +1,107 @@
+{
+  "status": "completed",
+  "terminal_reason": "all_checks_passed",
+  "title": "云帧剪辑字幕功能（30秒简洁版）",
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "visual": "创作者面对剪辑界面，画面出现“字幕”关键词",
+      "narration": "做短视频，字幕是常见需求。",
+      "subtitle": "字幕是常见需求",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_ids": [
+        "P01-F01"
+      ],
+      "estimated_seconds": 3.2
+    },
+    {
+      "scene_id": "S2",
+      "visual": "展示云帧剪辑产品名称与字幕相关界面示意",
+      "narration": "云帧剪辑支持字幕。",
+      "subtitle": "云帧剪辑支持字幕",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_ids": [
+        "P01-F01"
+      ],
+      "estimated_seconds": 2.5
+    },
+    {
+      "scene_id": "S3",
+      "visual": "创作者继续剪辑，屏幕提示“字幕功能”",
+      "narration": "需要字幕时，可以了解云帧剪辑的字幕能力。",
+      "subtitle": "了解云帧剪辑字幕能力",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_ids": [
+        "P01-F01"
+      ],
+      "estimated_seconds": 5.0
+    },
+    {
+      "scene_id": "S4",
+      "visual": "产品名称与“支持字幕”字样收尾",
+      "narration": "云帧剪辑，支持字幕。",
+      "subtitle": "云帧剪辑 支持字幕",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_ids": [
+        "P01-F01"
+      ],
+      "estimated_seconds": 2.5
+    }
+  ],
+  "estimated_total_seconds": 13.2,
+  "target_duration_seconds": 30,
+  "source_ids": [
+    "P01"
+  ],
+  "duration_check": {
+    "draft_revision": 1,
+    "draft_fingerprint": "c417deb2d58fd2be",
+    "scene_durations": [
+      {
+        "scene_id": "S1",
+        "estimated_seconds": 3.2
+      },
+      {
+        "scene_id": "S2",
+        "estimated_seconds": 2.5
+      },
+      {
+        "scene_id": "S3",
+        "estimated_seconds": 5.0
+      },
+      {
+        "scene_id": "S4",
+        "estimated_seconds": 2.5
+      }
+    ],
+    "total_seconds": 13.2,
+    "target_seconds": 30,
+    "over_by_seconds": 0.0,
+    "within_limit": true,
+    "estimation_method": "zh=4.0 chars/s; en=150.0 words/min; transition=0.5s/scene"
+  },
+  "rule_check": {
+    "draft_revision": 1,
+    "draft_fingerprint": "c417deb2d58fd2be",
+    "passed": true,
+    "violations": [],
+    "warnings": [],
+    "checked_source_ids": [
+      "P01"
+    ]
+  },
+  "risks": [
+    "时长为算法估算值，发布前仍建议真人试读。"
+  ],
+  "requested_fields": [],
+  "message": "脚本已通过时长和规则检查。",
+  "trace_file": "examples\\live-01-normal\\trace.json"
+}

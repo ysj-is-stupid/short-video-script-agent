@@ -1,0 +1,595 @@
+{
+  "trace_schema_version": "2.0",
+  "model_mode": "mock",
+  "model_metadata": {
+    "provider": "scripted_mock",
+    "model_name": "duration_revision",
+    "sdk_name": null,
+    "sdk_version": null,
+    "application_name": "short-video-script-agent",
+    "application_version": "0.1.0",
+    "capture_status": "captured",
+    "response_ids": []
+  },
+  "scenario": "duration_revision",
+  "mock_boundary": "Mock traces verify flow and state transitions, not real-model decision quality.",
+  "review_steps": [
+    {
+      "step": 1,
+      "tool": "search_materials",
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "next_action": "estimate_duration",
+      "decision_basis": "已取得素材事实，先生成首稿并检查时长。",
+      "draft_revision": null
+    },
+    {
+      "step": 2,
+      "tool": "estimate_duration",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚自",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "01301fdbef7333b5"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "result_kind": "rejected",
+      "result_summary": "Estimated 38.1s for target 30s; within_limit=false.",
+      "next_action": "estimate_duration",
+      "decision_basis": "当前脚本预计38.1秒，超过目标，需要压缩后重新估时。",
+      "draft_revision": 1
+    },
+    {
+      "step": 3,
+      "tool": "estimate_duration",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 2,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "83b70dfcefe23a9f"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "result_kind": "success",
+      "result_summary": "Estimated 28.0s for target 30s; within_limit=true.",
+      "next_action": "check_rules",
+      "decision_basis": "当前稿时长已通过，需要继续检查素材引用和品牌规则。",
+      "draft_revision": 2
+    },
+    {
+      "step": 4,
+      "tool": "check_rules",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 2,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "83b70dfcefe23a9f"
+        },
+        "retrieved_material_ids": [
+          "P01"
+        ],
+        "rules": [
+          {
+            "rule_id": "B01",
+            "description": "禁止无依据的绝对化宣传",
+            "severity": "error",
+            "forbidden_terms": [
+              "行业第一",
+              "百分百保证"
+            ],
+            "required_terms": [],
+            "applies_to_platforms": []
+          }
+        ],
+        "platform": "抖音"
+      },
+      "result_kind": "error",
+      "result_summary": "Injected check_rules failure for acceptance verification.",
+      "next_action": "fail",
+      "decision_basis": "业务工具失败或超时，当前无法安全继续。",
+      "draft_revision": 2
+    }
+  ],
+  "raw_events": [
+    {
+      "event_id": "E001-a1f53c",
+      "sequence": 1,
+      "timestamp": "2026-11-07T11:09:30.517569Z",
+      "node": "prepare_context",
+      "event_type": "observation",
+      "model_step": 0,
+      "tool_call_count": 0,
+      "action": null,
+      "public_reason": null,
+      "tool_name": "prepare_context",
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": "success",
+      "result_summary": "Request fields are complete.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E002-4e64c8",
+      "sequence": 2,
+      "timestamp": "2026-11-07T11:09:30.518217Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 1,
+      "tool_call_count": 0,
+      "action": "search_materials",
+      "public_reason": "需要先检索可追溯的产品事实。",
+      "tool_name": null,
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": "input-60037bd9"
+    },
+    {
+      "event_id": "E003-a82ecd",
+      "sequence": 3,
+      "timestamp": "2026-11-07T11:09:30.519282Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 1,
+      "tool_call_count": 1,
+      "action": "search_materials",
+      "public_reason": null,
+      "tool_name": "search_materials",
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "model_response_id": null,
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E004-007b10",
+      "sequence": 4,
+      "timestamp": "2026-11-07T11:09:30.519738Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 2,
+      "tool_call_count": 1,
+      "action": "estimate_duration",
+      "public_reason": "已取得素材事实，先生成首稿并检查时长。",
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": "search-ed5c05c5"
+    },
+    {
+      "event_id": "E005-0d6416",
+      "sequence": 5,
+      "timestamp": "2026-11-07T11:09:30.522895Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 2,
+      "tool_call_count": 2,
+      "action": "estimate_duration",
+      "public_reason": null,
+      "tool_name": "estimate_duration",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚自",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "01301fdbef7333b5"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "model_response_id": null,
+      "result_kind": "rejected",
+      "result_summary": "Estimated 38.1s for target 30s; within_limit=false.",
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E006-a2b416",
+      "sequence": 6,
+      "timestamp": "2026-11-07T11:09:30.523449Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 3,
+      "tool_call_count": 2,
+      "action": "estimate_duration",
+      "public_reason": "当前脚本预计38.1秒，超过目标，需要压缩后重新估时。",
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": 2,
+      "status_after": "running",
+      "based_on_observation_id": "duration-bacef68f"
+    },
+    {
+      "event_id": "E007-e3ea05",
+      "sequence": 7,
+      "timestamp": "2026-11-07T11:09:30.524568Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 3,
+      "tool_call_count": 3,
+      "action": "estimate_duration",
+      "public_reason": null,
+      "tool_name": "estimate_duration",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 2,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "83b70dfcefe23a9f"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "model_response_id": null,
+      "result_kind": "success",
+      "result_summary": "Estimated 28.0s for target 30s; within_limit=true.",
+      "draft_revision": 2,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E008-84e672",
+      "sequence": 8,
+      "timestamp": "2026-11-07T11:09:30.525015Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 4,
+      "tool_call_count": 3,
+      "action": "check_rules",
+      "public_reason": "当前稿时长已通过，需要继续检查素材引用和品牌规则。",
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": "duration-d1711d9e"
+    },
+    {
+      "event_id": "E009-807d4e",
+      "sequence": 9,
+      "timestamp": "2026-11-07T11:09:30.525814Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 4,
+      "tool_call_count": 4,
+      "action": "check_rules",
+      "public_reason": null,
+      "tool_name": "check_rules",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 2,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "83b70dfcefe23a9f"
+        },
+        "retrieved_material_ids": [
+          "P01"
+        ],
+        "rules": [
+          {
+            "rule_id": "B01",
+            "description": "禁止无依据的绝对化宣传",
+            "severity": "error",
+            "forbidden_terms": [
+              "行业第一",
+              "百分百保证"
+            ],
+            "required_terms": [],
+            "applies_to_platforms": []
+          }
+        ],
+        "platform": "抖音"
+      },
+      "model_response_id": null,
+      "result_kind": "error",
+      "result_summary": "Injected check_rules failure for acceptance verification.",
+      "draft_revision": 2,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E010-a9f03c",
+      "sequence": 10,
+      "timestamp": "2026-11-07T11:09:30.526185Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 5,
+      "tool_call_count": 4,
+      "action": "fail",
+      "public_reason": "业务工具失败或超时，当前无法安全继续。",
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": "fault-3e945fc3"
+    },
+    {
+      "event_id": "E011-8cd6a0",
+      "sequence": 11,
+      "timestamp": "2026-11-07T11:09:30.526924Z",
+      "node": "terminalize",
+      "event_type": "terminal",
+      "model_step": 5,
+      "tool_call_count": 4,
+      "action": null,
+      "public_reason": null,
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": "业务工具不可用，任务未完成。",
+      "draft_revision": 2,
+      "status_after": "failed",
+      "based_on_observation_id": null
+    }
+  ]
+}

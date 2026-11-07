@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "error_code": "invalid_input",
+  "message": "1 validation error for ScriptRequest\ntarget_duration_seconds\n  Input should be a valid integer [type=int_type, input_value='30秒', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/int_type",
+  "trace_file": "examples\\11-invalid-input-type\\trace.json"
+}

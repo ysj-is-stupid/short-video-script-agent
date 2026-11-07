@@ -1,0 +1,299 @@
+{
+  "trace_schema_version": "2.0",
+  "model_mode": "mock",
+  "model_metadata": {
+    "provider": "scripted_mock",
+    "model_name": "duration_revision",
+    "sdk_name": null,
+    "sdk_version": null,
+    "application_name": "short-video-script-agent",
+    "application_version": "0.1.0",
+    "capture_status": "captured",
+    "response_ids": []
+  },
+  "scenario": "duration_revision",
+  "mock_boundary": "Mock traces verify flow and state transitions, not real-model decision quality.",
+  "review_steps": [
+    {
+      "step": 1,
+      "tool": "search_materials",
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "next_action": "estimate_duration",
+      "decision_basis": "已取得素材事实，先生成首稿并检查时长。",
+      "draft_revision": null
+    },
+    {
+      "step": 2,
+      "tool": "estimate_duration",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚自",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "01301fdbef7333b5"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "result_kind": "timeout",
+      "result_summary": "Injected estimate_duration timeout for acceptance verification.",
+      "next_action": "fail",
+      "decision_basis": "业务工具失败或超时，当前无法安全继续。",
+      "draft_revision": 1
+    }
+  ],
+  "raw_events": [
+    {
+      "event_id": "E001-16270c",
+      "sequence": 1,
+      "timestamp": "2026-11-07T11:09:28.748653Z",
+      "node": "prepare_context",
+      "event_type": "observation",
+      "model_step": 0,
+      "tool_call_count": 0,
+      "action": null,
+      "public_reason": null,
+      "tool_name": "prepare_context",
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": "success",
+      "result_summary": "Request fields are complete.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E002-62c6a3",
+      "sequence": 2,
+      "timestamp": "2026-11-07T11:09:28.749254Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 1,
+      "tool_call_count": 0,
+      "action": "search_materials",
+      "public_reason": "需要先检索可追溯的产品事实。",
+      "tool_name": null,
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": "input-89857c49"
+    },
+    {
+      "event_id": "E003-02665f",
+      "sequence": 3,
+      "timestamp": "2026-11-07T11:09:28.750292Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 1,
+      "tool_call_count": 1,
+      "action": "search_materials",
+      "public_reason": null,
+      "tool_name": "search_materials",
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "model_response_id": null,
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E004-24275b",
+      "sequence": 4,
+      "timestamp": "2026-11-07T11:09:28.750739Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 2,
+      "tool_call_count": 1,
+      "action": "estimate_duration",
+      "public_reason": "已取得素材事实，先生成首稿并检查时长。",
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": "search-249ebb93"
+    },
+    {
+      "event_id": "E005-519076",
+      "sequence": 5,
+      "timestamp": "2026-11-07T11:09:28.751745Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 2,
+      "tool_call_count": 2,
+      "action": "estimate_duration",
+      "public_reason": null,
+      "tool_name": "estimate_duration",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "字幕功能：清晰表达每一步",
+          "scenes": [
+            {
+              "scene_id": "S01",
+              "visual": "展示产品中的字幕能力",
+              "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚",
+              "subtitle": "支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S02",
+              "visual": "展示创作者编辑短视频",
+              "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚自",
+              "subtitle": "把内容整理成清晰脚本",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            },
+            {
+              "scene_id": "S03",
+              "visual": "展示发布前检查",
+              "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容",
+              "subtitle": "检查后再发布",
+              "source_ids": [],
+              "fact_ids": [],
+              "estimated_seconds": null
+            }
+          ],
+          "fingerprint": "01301fdbef7333b5"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "model_response_id": null,
+      "result_kind": "timeout",
+      "result_summary": "Injected estimate_duration timeout for acceptance verification.",
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E006-dbadce",
+      "sequence": 6,
+      "timestamp": "2026-11-07T11:09:28.752116Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 3,
+      "tool_call_count": 2,
+      "action": "fail",
+      "public_reason": "业务工具失败或超时，当前无法安全继续。",
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": "fault-f9bdf394"
+    },
+    {
+      "event_id": "E007-e97cc8",
+      "sequence": 7,
+      "timestamp": "2026-11-07T11:09:28.752594Z",
+      "node": "terminalize",
+      "event_type": "terminal",
+      "model_step": 3,
+      "tool_call_count": 2,
+      "action": null,
+      "public_reason": null,
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": "业务工具不可用，任务未完成。",
+      "draft_revision": 1,
+      "status_after": "failed",
+      "based_on_observation_id": null
+    }
+  ]
+}

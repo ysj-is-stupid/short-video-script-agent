@@ -1,0 +1,562 @@
+{
+  "model_mode": "live",
+  "scenario": null,
+  "mock_boundary": null,
+  "review_steps": [
+    {
+      "step": 1,
+      "tool": "search_materials",
+      "proposed_tool_args": {
+        "query": "云帧剪辑 字幕功能",
+        "scope_ids": [
+          "P01"
+        ],
+        "top_k": 8
+      },
+      "executed_tool_args": {
+        "query": "云帧剪辑 字幕功能",
+        "product_name": "",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "next_action": "estimate_duration",
+      "decision_basis": "素材已检索到字幕能力事实，先按30秒目标生成简洁脚本并检查时长。",
+      "draft_revision": null
+    },
+    {
+      "step": 2,
+      "tool": "estimate_duration",
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "云帧剪辑字幕功能（30秒简洁版）",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者面对剪辑界面，画面出现“字幕”关键词",
+              "narration": "做短视频，字幕是常见需求。",
+              "subtitle": "字幕是常见需求",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S2",
+              "visual": "展示云帧剪辑产品名称与字幕相关界面示意",
+              "narration": "云帧剪辑支持字幕。",
+              "subtitle": "云帧剪辑支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者继续剪辑，屏幕提示“字幕功能”",
+              "narration": "需要字幕时，可以了解云帧剪辑的字幕能力。",
+              "subtitle": "了解云帧剪辑字幕能力",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S4",
+              "visual": "产品名称与“支持字幕”字样收尾",
+              "narration": "云帧剪辑，支持字幕。",
+              "subtitle": "云帧剪辑 支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            }
+          ],
+          "fingerprint": "c417deb2d58fd2be"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "result_kind": "success",
+      "result_summary": "Estimated 13.2s for target 30s; within_limit=true.",
+      "next_action": "check_rules",
+      "decision_basis": "当前稿时长已通过，需进行规则检查后才能完成。",
+      "draft_revision": 1
+    },
+    {
+      "step": 3,
+      "tool": "check_rules",
+      "proposed_tool_args": {
+        "draft_revision": 1,
+        "rule_scope_ids": [
+          "B01"
+        ]
+      },
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "云帧剪辑字幕功能（30秒简洁版）",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者面对剪辑界面，画面出现“字幕”关键词",
+              "narration": "做短视频，字幕是常见需求。",
+              "subtitle": "字幕是常见需求",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S2",
+              "visual": "展示云帧剪辑产品名称与字幕相关界面示意",
+              "narration": "云帧剪辑支持字幕。",
+              "subtitle": "云帧剪辑支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者继续剪辑，屏幕提示“字幕功能”",
+              "narration": "需要字幕时，可以了解云帧剪辑的字幕能力。",
+              "subtitle": "了解云帧剪辑字幕能力",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S4",
+              "visual": "产品名称与“支持字幕”字样收尾",
+              "narration": "云帧剪辑，支持字幕。",
+              "subtitle": "云帧剪辑 支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            }
+          ],
+          "fingerprint": "c417deb2d58fd2be"
+        },
+        "retrieved_material_ids": [
+          "P01"
+        ],
+        "rules": [
+          {
+            "rule_id": "B01",
+            "description": "禁止无依据的绝对化宣传",
+            "severity": "error",
+            "forbidden_terms": [
+              "行业第一",
+              "百分百保证"
+            ],
+            "required_terms": [],
+            "applies_to_platforms": []
+          }
+        ],
+        "platform": "抖音"
+      },
+      "result_kind": "success",
+      "result_summary": "Rule check passed=true; errors=0; warnings=0; codes=none.",
+      "next_action": "finish",
+      "decision_basis": "当前稿时长13.2秒在30秒目标内，规则检查通过且产品事实均来自素材P01。",
+      "draft_revision": 1
+    }
+  ],
+  "raw_events": [
+    {
+      "event_id": "E001-fcb7ba",
+      "sequence": 1,
+      "timestamp": "2026-11-07T07:46:56.606729Z",
+      "node": "prepare_context",
+      "event_type": "observation",
+      "model_step": 0,
+      "tool_call_count": 0,
+      "action": null,
+      "public_reason": null,
+      "tool_name": "prepare_context",
+      "result_kind": "success",
+      "result_summary": "Request fields are complete.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null
+    },
+    {
+      "event_id": "E002-4b4b43",
+      "sequence": 2,
+      "timestamp": "2026-11-07T07:48:03.104990Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 1,
+      "tool_call_count": 0,
+      "action": "search_materials",
+      "public_reason": "生成产品脚本前需先检索云帧剪辑字幕功能的素材事实。",
+      "tool_name": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": "input-9d5b12fa",
+      "proposed_tool_args": {
+        "query": "云帧剪辑 字幕功能",
+        "scope_ids": [
+          "P01"
+        ],
+        "top_k": 8
+      },
+      "executed_tool_args": {},
+      "model_response_id": null
+    },
+    {
+      "event_id": "E003-485eb2",
+      "sequence": 3,
+      "timestamp": "2026-11-07T07:48:03.106362Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 1,
+      "tool_call_count": 1,
+      "action": "search_materials",
+      "public_reason": null,
+      "tool_name": "search_materials",
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null,
+      "proposed_tool_args": {
+        "query": "云帧剪辑 字幕功能",
+        "scope_ids": [
+          "P01"
+        ],
+        "top_k": 8
+      },
+      "executed_tool_args": {
+        "query": "云帧剪辑 字幕功能",
+        "product_name": "",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "model_response_id": null
+    },
+    {
+      "event_id": "E004-4fa398",
+      "sequence": 4,
+      "timestamp": "2026-11-07T07:50:21.203422Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 2,
+      "tool_call_count": 1,
+      "action": "estimate_duration",
+      "public_reason": "素材已检索到字幕能力事实，先按30秒目标生成简洁脚本并检查时长。",
+      "tool_name": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": "search-6a314695",
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null
+    },
+    {
+      "event_id": "E005-a7b053",
+      "sequence": 5,
+      "timestamp": "2026-11-07T07:50:21.206819Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 2,
+      "tool_call_count": 2,
+      "action": "estimate_duration",
+      "public_reason": null,
+      "tool_name": "estimate_duration",
+      "result_kind": "success",
+      "result_summary": "Estimated 13.2s for target 30s; within_limit=true.",
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "云帧剪辑字幕功能（30秒简洁版）",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者面对剪辑界面，画面出现“字幕”关键词",
+              "narration": "做短视频，字幕是常见需求。",
+              "subtitle": "字幕是常见需求",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S2",
+              "visual": "展示云帧剪辑产品名称与字幕相关界面示意",
+              "narration": "云帧剪辑支持字幕。",
+              "subtitle": "云帧剪辑支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者继续剪辑，屏幕提示“字幕功能”",
+              "narration": "需要字幕时，可以了解云帧剪辑的字幕能力。",
+              "subtitle": "了解云帧剪辑字幕能力",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S4",
+              "visual": "产品名称与“支持字幕”字样收尾",
+              "narration": "云帧剪辑，支持字幕。",
+              "subtitle": "云帧剪辑 支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            }
+          ],
+          "fingerprint": "c417deb2d58fd2be"
+        },
+        "platform": "抖音",
+        "target_duration_seconds": 30
+      },
+      "model_response_id": null
+    },
+    {
+      "event_id": "E006-38700b",
+      "sequence": 6,
+      "timestamp": "2026-11-07T07:50:26.665990Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 3,
+      "tool_call_count": 2,
+      "action": "check_rules",
+      "public_reason": "当前稿时长已通过，需进行规则检查后才能完成。",
+      "tool_name": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": "duration-271925e2",
+      "proposed_tool_args": {
+        "draft_revision": 1,
+        "rule_scope_ids": [
+          "B01"
+        ]
+      },
+      "executed_tool_args": {},
+      "model_response_id": null
+    },
+    {
+      "event_id": "E007-8b9d10",
+      "sequence": 7,
+      "timestamp": "2026-11-07T07:50:26.667393Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 3,
+      "tool_call_count": 3,
+      "action": "check_rules",
+      "public_reason": null,
+      "tool_name": "check_rules",
+      "result_kind": "success",
+      "result_summary": "Rule check passed=true; errors=0; warnings=0; codes=none.",
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": null,
+      "proposed_tool_args": {
+        "draft_revision": 1,
+        "rule_scope_ids": [
+          "B01"
+        ]
+      },
+      "executed_tool_args": {
+        "draft": {
+          "revision": 1,
+          "title": "云帧剪辑字幕功能（30秒简洁版）",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者面对剪辑界面，画面出现“字幕”关键词",
+              "narration": "做短视频，字幕是常见需求。",
+              "subtitle": "字幕是常见需求",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S2",
+              "visual": "展示云帧剪辑产品名称与字幕相关界面示意",
+              "narration": "云帧剪辑支持字幕。",
+              "subtitle": "云帧剪辑支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者继续剪辑，屏幕提示“字幕功能”",
+              "narration": "需要字幕时，可以了解云帧剪辑的字幕能力。",
+              "subtitle": "了解云帧剪辑字幕能力",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            },
+            {
+              "scene_id": "S4",
+              "visual": "产品名称与“支持字幕”字样收尾",
+              "narration": "云帧剪辑，支持字幕。",
+              "subtitle": "云帧剪辑 支持字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "fact_ids": [
+                "P01-F01"
+              ]
+            }
+          ],
+          "fingerprint": "c417deb2d58fd2be"
+        },
+        "retrieved_material_ids": [
+          "P01"
+        ],
+        "rules": [
+          {
+            "rule_id": "B01",
+            "description": "禁止无依据的绝对化宣传",
+            "severity": "error",
+            "forbidden_terms": [
+              "行业第一",
+              "百分百保证"
+            ],
+            "required_terms": [],
+            "applies_to_platforms": []
+          }
+        ],
+        "platform": "抖音"
+      },
+      "model_response_id": null
+    },
+    {
+      "event_id": "E008-accc73",
+      "sequence": 8,
+      "timestamp": "2026-11-07T07:50:29.699816Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 4,
+      "tool_call_count": 3,
+      "action": "finish",
+      "public_reason": "当前稿时长13.2秒在30秒目标内，规则检查通过且产品事实均来自素材P01。",
+      "tool_name": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": 1,
+      "status_after": "running",
+      "based_on_observation_id": "rules-b764f2af",
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null
+    },
+    {
+      "event_id": "E009-6ee30f",
+      "sequence": 9,
+      "timestamp": "2026-11-07T07:50:29.700914Z",
+      "node": "completion_guard",
+      "event_type": "guard_accepted",
+      "model_step": 4,
+      "tool_call_count": 3,
+      "action": "finish",
+      "public_reason": null,
+      "tool_name": null,
+      "result_kind": "success",
+      "result_summary": "All completion conditions passed.",
+      "draft_revision": 1,
+      "status_after": "completed",
+      "based_on_observation_id": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null
+    },
+    {
+      "event_id": "E010-f8bb4a",
+      "sequence": 10,
+      "timestamp": "2026-11-07T07:50:29.701371Z",
+      "node": "terminalize",
+      "event_type": "terminal",
+      "model_step": 4,
+      "tool_call_count": 3,
+      "action": null,
+      "public_reason": null,
+      "tool_name": null,
+      "result_kind": null,
+      "result_summary": "脚本已通过时长和规则检查。",
+      "draft_revision": 1,
+      "status_after": "completed",
+      "based_on_observation_id": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null
+    }
+  ],
+  "trace_schema_version": "2.0",
+  "model_metadata": {
+    "provider": "deepseek",
+    "model_name": null,
+    "sdk_name": "openai",
+    "sdk_version": null,
+    "application_name": "short-video-script-agent",
+    "application_version": "0.1.0",
+    "capture_status": "historical_run_metadata_not_captured",
+    "response_ids": []
+  }
+}

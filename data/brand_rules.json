@@ -1,0 +1,11 @@
+[
+  {
+    "rule_id": "B01",
+    "description": "禁止无依据的绝对化宣传",
+    "severity": "error",
+    "forbidden_terms": ["行业第一", "百分百保证"],
+    "required_terms": [],
+    "applies_to_platforms": []
+  }
+]
+

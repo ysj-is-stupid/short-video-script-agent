@@ -1,0 +1,146 @@
+{
+  "trace_schema_version": "2.0",
+  "model_mode": "mock",
+  "model_metadata": {
+    "provider": "scripted_mock",
+    "model_name": "duration_revision",
+    "sdk_name": null,
+    "sdk_version": null,
+    "application_name": "short-video-script-agent",
+    "application_version": "0.1.0",
+    "capture_status": "captured",
+    "response_ids": []
+  },
+  "scenario": "duration_revision",
+  "mock_boundary": "Mock traces verify flow and state transitions, not real-model decision quality.",
+  "review_steps": [
+    {
+      "step": 1,
+      "tool": "search_materials",
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "next_action": null,
+      "decision_basis": null,
+      "draft_revision": null
+    }
+  ],
+  "raw_events": [
+    {
+      "event_id": "E001-94b8f3",
+      "sequence": 1,
+      "timestamp": "2026-11-07T11:09:32.323253Z",
+      "node": "prepare_context",
+      "event_type": "observation",
+      "model_step": 0,
+      "tool_call_count": 0,
+      "action": null,
+      "public_reason": null,
+      "tool_name": "prepare_context",
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": "success",
+      "result_summary": "Request fields are complete.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E002-17f8d5",
+      "sequence": 2,
+      "timestamp": "2026-11-07T11:09:32.324003Z",
+      "node": "agent_decide",
+      "event_type": "decision",
+      "model_step": 1,
+      "tool_call_count": 0,
+      "action": "search_materials",
+      "public_reason": "需要先检索可追溯的产品事实。",
+      "tool_name": null,
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": null,
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": "input-09f71b3c"
+    },
+    {
+      "event_id": "E003-b73fe9",
+      "sequence": 3,
+      "timestamp": "2026-11-07T11:09:32.325136Z",
+      "node": "record_observation",
+      "event_type": "tool_result",
+      "model_step": 1,
+      "tool_call_count": 1,
+      "action": "search_materials",
+      "public_reason": null,
+      "tool_name": "search_materials",
+      "proposed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "executed_tool_args": {
+        "query": "字幕功能",
+        "product_name": "云帧剪辑",
+        "scope_ids": [
+          "P01"
+        ],
+        "limit": 5
+      },
+      "model_response_id": null,
+      "result_kind": "success",
+      "result_summary": "Matched 1 material(s): P01.",
+      "draft_revision": null,
+      "status_after": "running",
+      "based_on_observation_id": null
+    },
+    {
+      "event_id": "E004-6b2b7d",
+      "sequence": 4,
+      "timestamp": "2026-11-07T11:09:32.325622Z",
+      "node": "terminalize",
+      "event_type": "terminal",
+      "model_step": 1,
+      "tool_call_count": 1,
+      "action": null,
+      "public_reason": null,
+      "tool_name": null,
+      "proposed_tool_args": {},
+      "executed_tool_args": {},
+      "model_response_id": null,
+      "result_kind": null,
+      "result_summary": "已达到模型决策步数上限，任务未完成。",
+      "draft_revision": null,
+      "status_after": "incomplete",
+      "based_on_observation_id": null
+    }
+  ]
+}

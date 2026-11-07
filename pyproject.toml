@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "short-video-script-agent"
+version = "0.1.0"
+description = "A source-grounded, duration-constrained short-video script agent built with LangGraph."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph==1.2.20",
+  "openai==2.54.0",
+  "pydantic==2.12.4",
+  "python-dotenv==1.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.2",
+]
+
+[project.scripts]
+short-video-agent = "short_video_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+testpaths = ["tests"]
+

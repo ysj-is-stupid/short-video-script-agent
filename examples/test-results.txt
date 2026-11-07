@@ -1,0 +1,41 @@
+Validation date: 2026-11-07 (Asia/Shanghai)
+
+Fresh environment:
+- Python: 3.13.9
+- Final environment `.validation-final-20261107` was confirmed absent before creation.
+- pip install -r requirements.txt: PASS
+- pip check: No broken requirements found.
+- python -m pytest -q: 48 passed (fresh install).
+- uv lock --check: PASS (49 packages resolved).
+
+Mock CLI exit codes:
+- normal duration revision: 0
+- missing information: 0
+- no materials: 0
+- tool failure: 4 (expected structured failure)
+- unsupported claim revision: 0
+- duration timeout: 4 (expected failed/tool_timeout)
+- rule tool failure: 4 (expected failed/tool_unavailable)
+- model step limit: 3 (expected incomplete)
+- tool call limit: 3 (expected incomplete)
+- multiple missing fields: 0 (expected needs_input)
+- invalid input type: 2 (expected startup validation failure)
+- unexpected tool exception: 4 (expected sanitized failed/tool_unavailable)
+
+Live model records:
+- live-01-normal: completed/all_checks_passed, P01 cited, 13.2 seconds, unsupported inference language absent.
+- live-02-no-materials: needs_input/no_supporting_materials, two distinct empty searches, no script generated.
+
+Static checks:
+- JSON parsing: PASS
+- Markdown relative links: PASS
+- working-tree secret scan (Git candidate files, ignored files excluded): PASS
+- local absolute path scan: PASS
+- .env ignored by Git: PASS (ignore rules do not protect archives, forced adds, logs, or manual copies)
+- Trace schema/provenance fields: PASS
+- OpenAI Responses offline stub: PASS
+
+Host-environment note:
+- The global Conda environment has an unrelated numba/numpy conflict.
+- A fresh isolated validation environment was therefore used for the authoritative dependency and test result above.
+

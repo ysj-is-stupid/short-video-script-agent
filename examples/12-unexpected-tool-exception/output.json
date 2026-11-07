@@ -1,0 +1,50 @@
+{
+  "status": "failed",
+  "terminal_reason": "tool_unavailable",
+  "title": "字幕功能：清晰表达每一步",
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "visual": "展示产品中的字幕能力",
+      "narration": "面向短视频创作者，支持字幕。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚",
+      "subtitle": "支持字幕",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_ids": [
+        "P01-F01"
+      ],
+      "estimated_seconds": null
+    },
+    {
+      "scene_id": "S02",
+      "visual": "展示创作者编辑短视频",
+      "narration": "用简洁的方式展示创作过程。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容清楚自",
+      "subtitle": "把内容整理成清晰脚本",
+      "source_ids": [],
+      "fact_ids": [],
+      "estimated_seconds": null
+    },
+    {
+      "scene_id": "S03",
+      "visual": "展示发布前检查",
+      "narration": "在抖音发布前检查文字并完成编辑。内容清楚自然节奏紧凑便于观看理解内容清楚自然节奏紧凑便于观看理解内容",
+      "subtitle": "检查后再发布",
+      "source_ids": [],
+      "fact_ids": [],
+      "estimated_seconds": null
+    }
+  ],
+  "estimated_total_seconds": null,
+  "target_duration_seconds": 30,
+  "source_ids": [
+    "P01"
+  ],
+  "duration_check": null,
+  "rule_check": null,
+  "risks": [],
+  "requested_fields": [],
+  "requested_details": null,
+  "message": "业务工具不可用，任务未完成。",
+  "trace_file": "examples\\12-unexpected-tool-exception\\trace.json"
+}
